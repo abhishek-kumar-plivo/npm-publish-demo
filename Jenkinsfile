@@ -7,6 +7,7 @@ pipeline {
         stage("build1"){
             steps {
                 sh "npm install"
+                sh "npm login"
             }
         }
         stage("2ndStage"){
