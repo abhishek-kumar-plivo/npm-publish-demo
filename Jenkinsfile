@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage("build1"){
             steps {
-                // sh "npm install"
+                sh "npm install"
                 // // sh "npm config set registry https://registry.npmjs.org/abhi-npm-publish-demo"
                 // // sh "npm config set _authToken=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"
                 // // sh "npm publish --registry https://registry.npmjs.org/"
