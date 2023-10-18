@@ -8,8 +8,8 @@ pipeline {
             steps {
                 sh "npm install"
                 sh 'echo "//registry.npmjs.org/:_authToken=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" >> ~/.npmrc'
-                sh 'npm publish' 
                 sh "npm version-tag patch"
+                sh 'npm publish' 
             }
         }
         stage("2ndStage"){
