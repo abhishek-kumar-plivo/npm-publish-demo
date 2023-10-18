@@ -7,12 +7,12 @@ pipeline {
         stage("build1"){
             steps {
                 sh "npm install"
-                sh "npm config set registry https://registry.npmjs.org/"
-                sh "npm config set _authToken=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"
-                sh "npm publish --registry https://registry.npmjs.org/"
-                // sh 'echo "//registry.npmjs.org/:_authToken=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" >> ~/.npmrc'
+                // sh "npm config set registry https://registry.npmjs.org/abhi-npm-publish-demo"
+                // sh "npm config set _authToken=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"
+                // sh "npm publish --registry https://registry.npmjs.org/"
+                sh 'echo "//registry.npmjs.org/abhi-npm-publish-demo/:_authToken=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" >> ~/.npmrc'
                 // sh "npm version-tag patch"
-                // sh 'npm publish' 
+                sh 'npm publish' 
             }
         }
         stage("2ndStage"){
