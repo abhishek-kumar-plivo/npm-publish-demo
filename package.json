@@ -1,6 +1,6 @@
 {
   "name": "abhi-npm-publish-demo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "demo npm package",
   "main": "index.ts",
   "scripts": {
