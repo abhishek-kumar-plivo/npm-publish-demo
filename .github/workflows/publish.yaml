@@ -1,6 +1,8 @@
 name: "publish npm"
 
-on: workflow_dispatch
+# configure manual trigger
+on:
+  workflow_dispatch:
 
 jobs:
     publish:
