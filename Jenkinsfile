@@ -7,7 +7,7 @@ pipeline {
         stage("build1"){
             steps {
                 sh "npm install"
-                sh "npm login --auth-type=legacy"
+                sh "npm login  --auth-type=legacy"
             }
         }
         stage("2ndStage"){
