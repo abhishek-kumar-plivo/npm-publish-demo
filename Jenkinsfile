@@ -36,7 +36,7 @@ pipeline {
 
 def publishNpmPackage(){
     sh 'echo "//registry.npmjs.org/:_authToken=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" >> ~/.npmrc'
-
+    sh 'npm config set registry https://registry.npmjs.org/'
     sh 'npm publish'
 	// sh "echo \"//registry.npmjs.org/:username=abhishek\" >> ~/.npmrc"
 	
