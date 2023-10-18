@@ -7,9 +7,12 @@ pipeline {
         stage("build1"){
             steps {
                 sh "npm install"
-                sh 'echo "//registry.npmjs.org/:_authToken=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" >> ~/.npmrc'
-                sh "npm version-tag patch"
-                sh 'npm publish' 
+                sh "npm config set registry https://registry.npmjs.org/"
+                sh "npm config set _authToken=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"
+                sh "npm publish --registry https://registry.npmjs.org/"
+                // sh 'echo "//registry.npmjs.org/:_authToken=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" >> ~/.npmrc'
+                // sh "npm version-tag patch"
+                // sh 'npm publish' 
             }
         }
         stage("2ndStage"){
